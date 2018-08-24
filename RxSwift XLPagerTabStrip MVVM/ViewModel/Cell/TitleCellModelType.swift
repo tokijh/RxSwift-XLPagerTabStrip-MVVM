@@ -10,6 +10,11 @@ import RxCocoa
 
 protocol TitleCellModelType: ViewModelType {
     
+    init(title: String?)
+    
+    // MARK Title
+    var title: BehaviorRelay<String?> { get }
+    
     // MARK Title Label
     var titleLabelText: Driver<String?> { get }
 }

@@ -17,16 +17,34 @@
 		CD389C98212FDBE200474BA2 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389C97212FDBE200474BA2 /* ViewModelType.swift */; };
 		CD389C9B212FDC0400474BA2 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389C9A212FDC0400474BA2 /* Sample.swift */; };
 		CD389C9F212FDC2300474BA2 /* MainSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389C9E212FDC2300474BA2 /* MainSectionData.swift */; };
-		CD389CA7212FDCF400474BA2 /* SampleCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CA6212FDCF400474BA2 /* SampleCellModelType.swift */; };
-		CD389CA9212FDCFC00474BA2 /* SampleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CA8212FDCFC00474BA2 /* SampleCellModel.swift */; };
 		CD389CB0212FDDA400474BA2 /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CAF212FDDA400474BA2 /* SampleService.swift */; };
 		CD389CB4212FDDB800474BA2 /* SampleServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CB3212FDDB800474BA2 /* SampleServiceType.swift */; };
-		CD389CB7212FDE0D00474BA2 /* StringServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CB6212FDE0D00474BA2 /* StringServiceType.swift */; };
-		CD389CB9212FDE1B00474BA2 /* StringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CB8212FDE1B00474BA2 /* StringService.swift */; };
+		CD389CB7212FDE0D00474BA2 /* MarketServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CB6212FDE0D00474BA2 /* MarketServiceType.swift */; };
+		CD389CB9212FDE1B00474BA2 /* MarketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CB8212FDE1B00474BA2 /* MarketService.swift */; };
 		CD389CBD212FE08300474BA2 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CBC212FE08300474BA2 /* TitleCell.swift */; };
 		CD389CBF212FE0A900474BA2 /* TitleCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CBE212FE0A900474BA2 /* TitleCellModelType.swift */; };
-		CD389CC2212FE11C00474BA2 /* StringCellModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CC1212FE11C00474BA2 /* StringCellModelType.swift */; };
-		CD389CC4212FE12200474BA2 /* StringCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CC3212FE12200474BA2 /* StringCellModel.swift */; };
+		CD389CC7212FE59A00474BA2 /* ButtonBarPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CC6212FE59A00474BA2 /* ButtonBarPagerViewController.swift */; };
+		CD389CCE212FE61400474BA2 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CCD212FE61400474BA2 /* Pager.swift */; };
+		CD389CD0212FE67E00474BA2 /* TitlePagerChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CCF212FE67E00474BA2 /* TitlePagerChildViewController.swift */; };
+		CD389CD6212FE6F500474BA2 /* TitlePagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CD5212FE6F500474BA2 /* TitlePagerChildViewModelType.swift */; };
+		CD389CDA212FE76F00474BA2 /* StringPagerChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CD9212FE76F00474BA2 /* StringPagerChildViewModel.swift */; };
+		CD389CDC212FE77B00474BA2 /* StringPagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CDB212FE77B00474BA2 /* StringPagerChildViewModelType.swift */; };
+		CD389CDF212FE8A400474BA2 /* SamplePagerChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CDE212FE8A400474BA2 /* SamplePagerChildViewModel.swift */; };
+		CD389CE1212FE8CA00474BA2 /* SamplePagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CE0212FE8CA00474BA2 /* SamplePagerChildViewModelType.swift */; };
+		CD389CE4212FEA2B00474BA2 /* ButtonBarPagerViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CE3212FEA2B00474BA2 /* ButtonBarPagerViewModelType.swift */; };
+		CD389CE8212FEA4F00474BA2 /* PagerViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CE7212FEA4F00474BA2 /* PagerViewModelType.swift */; };
+		CD389CEB212FEAC300474BA2 /* StringButtonBarPagerViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CEA212FEAC300474BA2 /* StringButtonBarPagerViewModelType.swift */; };
+		CD389CED212FEAF300474BA2 /* SampleButtonBarPagerViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CEC212FEAF300474BA2 /* SampleButtonBarPagerViewModelType.swift */; };
+		CD389CEF212FEBAE00474BA2 /* StringButtonBarPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CEE212FEBAE00474BA2 /* StringButtonBarPagerViewModel.swift */; };
+		CD389CF1212FECBA00474BA2 /* SampleButtonBarPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CF0212FECBA00474BA2 /* SampleButtonBarPagerViewModel.swift */; };
+		CD389CF7212FEF4200474BA2 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CF6212FEF4200474BA2 /* Market.swift */; };
+		CD389CFC212FF0B200474BA2 /* StringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CFA212FF0B200474BA2 /* StringService.swift */; };
+		CD389CFD212FF0B200474BA2 /* StringServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CFB212FF0B200474BA2 /* StringServiceType.swift */; };
+		CD389CFF212FF4DB00474BA2 /* TitleCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389CFE212FF4DB00474BA2 /* TitleCellModel.swift */; };
+		CD389D03212FF60F00474BA2 /* MarketButtonBarPagerViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D01212FF60F00474BA2 /* MarketButtonBarPagerViewModelType.swift */; };
+		CD389D04212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D02212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift */; };
+		CD389D08212FF67200474BA2 /* MarketPagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D06212FF67200474BA2 /* MarketPagerChildViewModelType.swift */; };
+		CD389D09212FF67200474BA2 /* MarketPagerChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D07212FF67200474BA2 /* MarketPagerChildViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,16 +62,34 @@
 		CD389C97212FDBE200474BA2 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		CD389C9A212FDC0400474BA2 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		CD389C9E212FDC2300474BA2 /* MainSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSectionData.swift; sourceTree = "<group>"; };
-		CD389CA6212FDCF400474BA2 /* SampleCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCellModelType.swift; sourceTree = "<group>"; };
-		CD389CA8212FDCFC00474BA2 /* SampleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCellModel.swift; sourceTree = "<group>"; };
 		CD389CAF212FDDA400474BA2 /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
 		CD389CB3212FDDB800474BA2 /* SampleServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleServiceType.swift; sourceTree = "<group>"; };
-		CD389CB6212FDE0D00474BA2 /* StringServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringServiceType.swift; sourceTree = "<group>"; };
-		CD389CB8212FDE1B00474BA2 /* StringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringService.swift; sourceTree = "<group>"; };
+		CD389CB6212FDE0D00474BA2 /* MarketServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketServiceType.swift; sourceTree = "<group>"; };
+		CD389CB8212FDE1B00474BA2 /* MarketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketService.swift; sourceTree = "<group>"; };
 		CD389CBC212FE08300474BA2 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		CD389CBE212FE0A900474BA2 /* TitleCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellModelType.swift; sourceTree = "<group>"; };
-		CD389CC1212FE11C00474BA2 /* StringCellModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCellModelType.swift; sourceTree = "<group>"; };
-		CD389CC3212FE12200474BA2 /* StringCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCellModel.swift; sourceTree = "<group>"; };
+		CD389CC6212FE59A00474BA2 /* ButtonBarPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerViewController.swift; sourceTree = "<group>"; };
+		CD389CCD212FE61400474BA2 /* Pager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pager.swift; sourceTree = "<group>"; };
+		CD389CCF212FE67E00474BA2 /* TitlePagerChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePagerChildViewController.swift; sourceTree = "<group>"; };
+		CD389CD5212FE6F500474BA2 /* TitlePagerChildViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePagerChildViewModelType.swift; sourceTree = "<group>"; };
+		CD389CD9212FE76F00474BA2 /* StringPagerChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringPagerChildViewModel.swift; sourceTree = "<group>"; };
+		CD389CDB212FE77B00474BA2 /* StringPagerChildViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringPagerChildViewModelType.swift; sourceTree = "<group>"; };
+		CD389CDE212FE8A400474BA2 /* SamplePagerChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePagerChildViewModel.swift; sourceTree = "<group>"; };
+		CD389CE0212FE8CA00474BA2 /* SamplePagerChildViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePagerChildViewModelType.swift; sourceTree = "<group>"; };
+		CD389CE3212FEA2B00474BA2 /* ButtonBarPagerViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBarPagerViewModelType.swift; sourceTree = "<group>"; };
+		CD389CE7212FEA4F00474BA2 /* PagerViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagerViewModelType.swift; sourceTree = "<group>"; };
+		CD389CEA212FEAC300474BA2 /* StringButtonBarPagerViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringButtonBarPagerViewModelType.swift; sourceTree = "<group>"; };
+		CD389CEC212FEAF300474BA2 /* SampleButtonBarPagerViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleButtonBarPagerViewModelType.swift; sourceTree = "<group>"; };
+		CD389CEE212FEBAE00474BA2 /* StringButtonBarPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringButtonBarPagerViewModel.swift; sourceTree = "<group>"; };
+		CD389CF0212FECBA00474BA2 /* SampleButtonBarPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleButtonBarPagerViewModel.swift; sourceTree = "<group>"; };
+		CD389CF6212FEF4200474BA2 /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
+		CD389CFA212FF0B200474BA2 /* StringService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringService.swift; sourceTree = "<group>"; };
+		CD389CFB212FF0B200474BA2 /* StringServiceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringServiceType.swift; sourceTree = "<group>"; };
+		CD389CFE212FF4DB00474BA2 /* TitleCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCellModel.swift; sourceTree = "<group>"; };
+		CD389D01212FF60F00474BA2 /* MarketButtonBarPagerViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketButtonBarPagerViewModelType.swift; sourceTree = "<group>"; };
+		CD389D02212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketButtonBarPagerViewModel.swift; sourceTree = "<group>"; };
+		CD389D06212FF67200474BA2 /* MarketPagerChildViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPagerChildViewModelType.swift; sourceTree = "<group>"; };
+		CD389D07212FF67200474BA2 /* MarketPagerChildViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPagerChildViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +142,7 @@
 		CD389C79212FDB0000474BA2 /* RxSwift XLPagerTabStrip MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				CD389CCB212FE60300474BA2 /* Utility */,
 				CD389CAA212FDD4B00474BA2 /* Service */,
 				CD389C99212FDBFD00474BA2 /* Model */,
 				CD389C90212FDBB200474BA2 /* ViewModel */,
@@ -123,6 +160,7 @@
 			children = (
 				CD389CA1212FDCB800474BA2 /* Cell */,
 				CD389C8D212FDB9800474BA2 /* Main */,
+				CD389CC5212FE58000474BA2 /* Pager */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +179,7 @@
 				CD389C97212FDBE200474BA2 /* ViewModelType.swift */,
 				CD389CA4212FDCDB00474BA2 /* Cell */,
 				CD389C91212FDBB600474BA2 /* Main */,
+				CD389CD1212FE6BF00474BA2 /* Pager */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +206,7 @@
 			children = (
 				CD389C9D212FDC1500474BA2 /* SectionData */,
 				CD389C9C212FDC0D00474BA2 /* Sample */,
+				CD389CF8212FEF5F00474BA2 /* Market */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,26 +247,17 @@
 			isa = PBXGroup;
 			children = (
 				CD389CBE212FE0A900474BA2 /* TitleCellModelType.swift */,
-				CD389CC0212FE10F00474BA2 /* StringCellModel */,
-				CD389CA5212FDCE400474BA2 /* SampleCellModel */,
+				CD389CFE212FF4DB00474BA2 /* TitleCellModel.swift */,
 			);
 			path = Cell;
-			sourceTree = "<group>";
-		};
-		CD389CA5212FDCE400474BA2 /* SampleCellModel */ = {
-			isa = PBXGroup;
-			children = (
-				CD389CA6212FDCF400474BA2 /* SampleCellModelType.swift */,
-				CD389CA8212FDCFC00474BA2 /* SampleCellModel.swift */,
-			);
-			path = SampleCellModel;
 			sourceTree = "<group>";
 		};
 		CD389CAA212FDD4B00474BA2 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				CD389CB5212FDDF700474BA2 /* StringService */,
+				CD389CF9212FF09B00474BA2 /* StringService */,
 				CD389CAC212FDD6C00474BA2 /* SampleService */,
+				CD389CB5212FDDF700474BA2 /* MarketService */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -240,22 +271,157 @@
 			path = SampleService;
 			sourceTree = "<group>";
 		};
-		CD389CB5212FDDF700474BA2 /* StringService */ = {
+		CD389CB5212FDDF700474BA2 /* MarketService */ = {
 			isa = PBXGroup;
 			children = (
-				CD389CB6212FDE0D00474BA2 /* StringServiceType.swift */,
-				CD389CB8212FDE1B00474BA2 /* StringService.swift */,
+				CD389CB6212FDE0D00474BA2 /* MarketServiceType.swift */,
+				CD389CB8212FDE1B00474BA2 /* MarketService.swift */,
+			);
+			path = MarketService;
+			sourceTree = "<group>";
+		};
+		CD389CC5212FE58000474BA2 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CC8212FE5D100474BA2 /* Child */,
+				CD389CC6212FE59A00474BA2 /* ButtonBarPagerViewController.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		CD389CC8212FE5D100474BA2 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CCF212FE67E00474BA2 /* TitlePagerChildViewController.swift */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		CD389CCB212FE60300474BA2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CCC212FE60D00474BA2 /* Pager */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CD389CCC212FE60D00474BA2 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CCD212FE61400474BA2 /* Pager.swift */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		CD389CD1212FE6BF00474BA2 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CE7212FEA4F00474BA2 /* PagerViewModelType.swift */,
+				CD389CD2212FE6CC00474BA2 /* Child */,
+				CD389CE2212FEA1000474BA2 /* ButtonBarPagerViewModel */,
+				CD389CE9212FEAAE00474BA2 /* StringButtonBarPagerViewModel */,
+				CD389CF2212FECDD00474BA2 /* SampleButtonBarPagerViewModel */,
+				CD389D00212FF60F00474BA2 /* MarketButtonBarPagerViewModel */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		CD389CD2212FE6CC00474BA2 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CD7212FE73D00474BA2 /* TitlePagerChildViewModel */,
+				CD389CD8212FE74B00474BA2 /* StringPagerChildViewModel */,
+				CD389CDD212FE88B00474BA2 /* SamplePagerChildViewModel */,
+				CD389D05212FF67200474BA2 /* MarketPagerChildViewModel */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		CD389CD7212FE73D00474BA2 /* TitlePagerChildViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CD5212FE6F500474BA2 /* TitlePagerChildViewModelType.swift */,
+			);
+			path = TitlePagerChildViewModel;
+			sourceTree = "<group>";
+		};
+		CD389CD8212FE74B00474BA2 /* StringPagerChildViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CDB212FE77B00474BA2 /* StringPagerChildViewModelType.swift */,
+				CD389CD9212FE76F00474BA2 /* StringPagerChildViewModel.swift */,
+			);
+			path = StringPagerChildViewModel;
+			sourceTree = "<group>";
+		};
+		CD389CDD212FE88B00474BA2 /* SamplePagerChildViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CE0212FE8CA00474BA2 /* SamplePagerChildViewModelType.swift */,
+				CD389CDE212FE8A400474BA2 /* SamplePagerChildViewModel.swift */,
+			);
+			path = SamplePagerChildViewModel;
+			sourceTree = "<group>";
+		};
+		CD389CE2212FEA1000474BA2 /* ButtonBarPagerViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CE3212FEA2B00474BA2 /* ButtonBarPagerViewModelType.swift */,
+			);
+			path = ButtonBarPagerViewModel;
+			sourceTree = "<group>";
+		};
+		CD389CE9212FEAAE00474BA2 /* StringButtonBarPagerViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CEA212FEAC300474BA2 /* StringButtonBarPagerViewModelType.swift */,
+				CD389CEE212FEBAE00474BA2 /* StringButtonBarPagerViewModel.swift */,
+			);
+			path = StringButtonBarPagerViewModel;
+			sourceTree = "<group>";
+		};
+		CD389CF2212FECDD00474BA2 /* SampleButtonBarPagerViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CEC212FEAF300474BA2 /* SampleButtonBarPagerViewModelType.swift */,
+				CD389CF0212FECBA00474BA2 /* SampleButtonBarPagerViewModel.swift */,
+			);
+			path = SampleButtonBarPagerViewModel;
+			sourceTree = "<group>";
+		};
+		CD389CF8212FEF5F00474BA2 /* Market */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CF6212FEF4200474BA2 /* Market.swift */,
+			);
+			path = Market;
+			sourceTree = "<group>";
+		};
+		CD389CF9212FF09B00474BA2 /* StringService */ = {
+			isa = PBXGroup;
+			children = (
+				CD389CFB212FF0B200474BA2 /* StringServiceType.swift */,
+				CD389CFA212FF0B200474BA2 /* StringService.swift */,
 			);
 			path = StringService;
 			sourceTree = "<group>";
 		};
-		CD389CC0212FE10F00474BA2 /* StringCellModel */ = {
+		CD389D00212FF60F00474BA2 /* MarketButtonBarPagerViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CD389CC1212FE11C00474BA2 /* StringCellModelType.swift */,
-				CD389CC3212FE12200474BA2 /* StringCellModel.swift */,
+				CD389D01212FF60F00474BA2 /* MarketButtonBarPagerViewModelType.swift */,
+				CD389D02212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift */,
 			);
-			path = StringCellModel;
+			path = MarketButtonBarPagerViewModel;
+			sourceTree = "<group>";
+		};
+		CD389D05212FF67200474BA2 /* MarketPagerChildViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D06212FF67200474BA2 /* MarketPagerChildViewModelType.swift */,
+				CD389D07212FF67200474BA2 /* MarketPagerChildViewModel.swift */,
+			);
+			path = MarketPagerChildViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,22 +547,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD389CB9212FDE1B00474BA2 /* StringService.swift in Sources */,
+				CD389CCE212FE61400474BA2 /* Pager.swift in Sources */,
+				CD389D08212FF67200474BA2 /* MarketPagerChildViewModelType.swift in Sources */,
+				CD389D04212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift in Sources */,
+				CD389CEF212FEBAE00474BA2 /* StringButtonBarPagerViewModel.swift in Sources */,
+				CD389CB9212FDE1B00474BA2 /* MarketService.swift in Sources */,
 				CD389C7B212FDB0000474BA2 /* AppDelegate.swift in Sources */,
+				CD389CFF212FF4DB00474BA2 /* TitleCellModel.swift in Sources */,
+				CD389CF1212FECBA00474BA2 /* SampleButtonBarPagerViewModel.swift in Sources */,
+				CD389CDF212FE8A400474BA2 /* SamplePagerChildViewModel.swift in Sources */,
 				CD389CB0212FDDA400474BA2 /* SampleService.swift in Sources */,
-				CD389CA7212FDCF400474BA2 /* SampleCellModelType.swift in Sources */,
+				CD389CDC212FE77B00474BA2 /* StringPagerChildViewModelType.swift in Sources */,
+				CD389CFD212FF0B200474BA2 /* StringServiceType.swift in Sources */,
 				CD389CBF212FE0A900474BA2 /* TitleCellModelType.swift in Sources */,
+				CD389CE1212FE8CA00474BA2 /* SamplePagerChildViewModelType.swift in Sources */,
+				CD389D09212FF67200474BA2 /* MarketPagerChildViewModel.swift in Sources */,
+				CD389CFC212FF0B200474BA2 /* StringService.swift in Sources */,
+				CD389CDA212FE76F00474BA2 /* StringPagerChildViewModel.swift in Sources */,
 				CD389C9B212FDC0400474BA2 /* Sample.swift in Sources */,
 				CD389C8F212FDBA100474BA2 /* MainViewController.swift in Sources */,
 				CD389C94212FDBC500474BA2 /* MainViewModelType.swift in Sources */,
-				CD389CC4212FE12200474BA2 /* StringCellModel.swift in Sources */,
 				CD389C9F212FDC2300474BA2 /* MainSectionData.swift in Sources */,
-				CD389CB7212FDE0D00474BA2 /* StringServiceType.swift in Sources */,
-				CD389CC2212FE11C00474BA2 /* StringCellModelType.swift in Sources */,
+				CD389CB7212FDE0D00474BA2 /* MarketServiceType.swift in Sources */,
+				CD389CC7212FE59A00474BA2 /* ButtonBarPagerViewController.swift in Sources */,
+				CD389D03212FF60F00474BA2 /* MarketButtonBarPagerViewModelType.swift in Sources */,
+				CD389CED212FEAF300474BA2 /* SampleButtonBarPagerViewModelType.swift in Sources */,
 				CD389CB4212FDDB800474BA2 /* SampleServiceType.swift in Sources */,
+				CD389CEB212FEAC300474BA2 /* StringButtonBarPagerViewModelType.swift in Sources */,
 				CD389CBD212FE08300474BA2 /* TitleCell.swift in Sources */,
-				CD389CA9212FDCFC00474BA2 /* SampleCellModel.swift in Sources */,
+				CD389CD0212FE67E00474BA2 /* TitlePagerChildViewController.swift in Sources */,
+				CD389CF7212FEF4200474BA2 /* Market.swift in Sources */,
 				CD389C98212FDBE200474BA2 /* ViewModelType.swift in Sources */,
+				CD389CE8212FEA4F00474BA2 /* PagerViewModelType.swift in Sources */,
+				CD389CD6212FE6F500474BA2 /* TitlePagerChildViewModelType.swift in Sources */,
+				CD389CE4212FEA2B00474BA2 /* ButtonBarPagerViewModelType.swift in Sources */,
 				CD389C96212FDBCC00474BA2 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

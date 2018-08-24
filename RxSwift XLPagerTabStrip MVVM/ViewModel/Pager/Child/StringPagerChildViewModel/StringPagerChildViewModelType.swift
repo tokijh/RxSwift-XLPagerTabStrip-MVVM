@@ -1,5 +1,5 @@
 //
-//  StringCellModelType.swift
+//  StringPagerChildViewModelType.swift
 //  RxSwift XLPagerTabStrip MVVM
 //
 //  Created by  Joonghyun-Yoon on 2018. 8. 24..
@@ -8,7 +8,7 @@
 
 import RxCocoa
 
-protocol StringCellModelType: TitleCellModelType {
+protocol StringPagerChildViewModelType: TitlePagerChildViewModelType {
     
     init(string: String)
     

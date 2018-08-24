@@ -1,5 +1,5 @@
 //
-//  StringCellModel.swift
+//  TitleCellModel.swift
 //  RxSwift XLPagerTabStrip MVVM
 //
 //  Created by  Joonghyun-Yoon on 2018. 8. 24..
@@ -9,20 +9,21 @@
 import RxSwift
 import RxCocoa
 
-class StringCellModel: StringCellModelType {
+class TitleCellModel: TitleCellModelType {
     
     let disposeBag = DisposeBag()
     
-    let string: BehaviorRelay<String>
-    
-    required init(string: String) {
-        self.string = BehaviorRelay<String>(value: string)
+    required init(title: String?) {
+        self.title = BehaviorRelay<String?>(value: title)
         setup()
     }
     
     fileprivate func setup() {
         setupTitleLabel()
     }
+    
+    // MARK Title
+    let title: BehaviorRelay<String?>
     
     // MARK Title Label
     fileprivate var _titleLabelText: Driver<String?>!
@@ -31,6 +32,7 @@ class StringCellModel: StringCellModelType {
     }
     
     fileprivate func setupTitleLabel() {
-        _titleLabelText = string.asDriver().map({ Optional<String>($0) })
+        _titleLabelText = title.asDriver()
     }
 }
+

@@ -13,64 +13,50 @@ class MainViewModel: MainViewModelType {
     
     let disposeBag = DisposeBag()
     
-    required init(stringService: StringServiceType = StringService(), sampleService: SampleServiceType = SampleService()) {
+    required init(stringService: StringServiceType = StringService(), sampleService: SampleServiceType = SampleService(), marketService: MarketServiceType = MarketService()) {
         self.stringService = stringService
         self.sampleService = sampleService
+        self.marketService = marketService
         setup()
     }
     
     fileprivate func setup() {
-        setupString()
-        setupSample()
         setupSection()
     }
     
     // MARK Service
     let stringService: StringServiceType
     let sampleService: SampleServiceType
-    
-    // MARK String
-    let strings = BehaviorRelay<[String]>(value: [])
-    
-    fileprivate func setupString() {
-        stringService
-            .getStrings()
-            .bind(to: strings)
-            .disposed(by: disposeBag)
-    }
-    
-    // MARK Sample
-    let samples = BehaviorRelay<[Sample]>(value: [])
-    
-    fileprivate func setupSample() {
-        sampleService
-            .getSamples()
-            .bind(to: samples)
-            .disposed(by: disposeBag)
-    }
+    let marketService: MarketServiceType
     
     // MARK Section
     let sections = BehaviorRelay<[MainSectionData]>(value: [])
     let eventDidClickRow = PublishSubject<MainSectionData.Value>()
     
     fileprivate func setupSection() {
-        let sectionDataString = strings.map({ MainSectionData.strings($0) })
-        let sectionDataSample = samples.map({ MainSectionData.samples($0) })
-        Observable.combineLatest([sectionDataString, sectionDataSample])
+        // String
+        let sectionDataStringValue = stringService.getStrings().map({ MainSectionData.Value.strings(title: "String", items: $0) })
+        let sectionDataString = sectionDataStringValue.map({ [$0] }).map({ MainSectionData.strings($0) })
+        
+        // Sample
+        let sectionDataSampleValue = sampleService.getSamples().map({ MainSectionData.Value.samples(title: "Sample", items: $0) })
+        let sectionDataSample = sectionDataSampleValue.map({ [$0] }).map({ MainSectionData.samples($0) })
+        
+        // Market
+        let sectionDataMarketAllValue = marketService.getAllMarkets().map({ MainSectionData.Value.markets(title: "Market All", items: $0) })
+        let sectionDataMarketLikedValue = marketService.getLikedMarkets().map({ MainSectionData.Value.markets(title: "Market Liked", items: $0) })
+        let sectionDataMarket = Observable.combineLatest([sectionDataMarketAllValue, sectionDataMarketLikedValue]).map({ MainSectionData.markets($0) })
+        
+        Observable.combineLatest([sectionDataString, sectionDataSample, sectionDataMarket])
             .bind(to: sections)
             .disposed(by: disposeBag)
         
         // Event
-//        eventDidClickRow
-//            .map({ section -> Sample? in
-//                switch section {
-//                case let .sample(sample): return sample
-//                }
-//            })
-//            .map({ $0?.viewController })
-//            .filterNil()
-//            .bind(to: actionPushVC)
-//            .disposed(by: disposeBag)
+        eventDidClickRow
+            .map({ $0.viewController })
+            .filterNil()            
+            .bind(to: actionPushVC)
+            .disposed(by: disposeBag)
     }
     
     // MARK Action

@@ -11,17 +11,12 @@ import RxCocoa
 
 protocol MainViewModelType: ViewModelType {
     
-    init(stringService: StringServiceType, sampleService: SampleServiceType)
+    init(stringService: StringServiceType, sampleService: SampleServiceType, marketService: MarketServiceType)
     
     // MARK Service
     var stringService: StringServiceType { get }
     var sampleService: SampleServiceType { get }
-    
-    // MARK String
-    var strings: BehaviorRelay<[String]> { get }
-    
-    // MARK Sample
-    var samples: BehaviorRelay<[Sample]> { get }
+    var marketService: MarketServiceType { get }
     
     // MARK Section
     var sections: BehaviorRelay<[MainSectionData]> { get }

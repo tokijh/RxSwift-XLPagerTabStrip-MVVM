@@ -9,20 +9,34 @@
 import RxSwiftExtensions
 
 enum MainSectionData {
-    case strings([String])
-    case samples([Sample])
+    case strings([Value])
+    case samples([Value])
+    case markets([Value])
 }
 
 extension MainSectionData: SectionDataType {
     var items: [Value] {
         switch self {
-        case let .strings(strings): return strings.map({ Value.string($0) })
-        case let .samples(samples): return samples.map({ Value.sample($0) })
+        case let .strings(strings): return strings
+        case let .samples(samples): return samples
+        case let .markets(markets): return markets
         }
     }
     
     enum Value {
-        case string(String)
-        case sample(Sample)
+        case strings(title: String, items: [String])
+        case samples(title: String, items: [Sample])
+        case markets(title: String, items: [Market])
+    }
+}
+
+// MARK Pagerable
+extension MainSectionData.Value: Pagerable {
+    var viewController: UIViewController? {
+        switch self {
+        case let .strings(_, strings): return ButtonBarPagerViewController(viewModel: StringButtonBarPagerViewModel(strings: strings))
+        case let .samples(_, samples): return ButtonBarPagerViewController(viewModel: SampleButtonBarPagerViewModel(samples: samples))
+        case let .markets(_, markets): return ButtonBarPagerViewController(viewModel: MarketButtonBarPagerViewModel(markets: markets))
+        }
     }
 }

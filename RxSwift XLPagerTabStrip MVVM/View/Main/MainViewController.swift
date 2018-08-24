@@ -63,14 +63,19 @@ class MainViewController: UITableViewController {
         let section = viewModel.sections.value[indexPath.section].items[indexPath.row]
         
         switch section {
-        case let .string(string):
+        case let .strings(title, _):
             if let cell = tableView.dequeue(TitleCell.self, indexPath: indexPath) {
-                cell.set(viewModel: StringCellModel(string: string))
+                cell.set(viewModel: TitleCellModel(title: title))
                 return cell
             }
-        case let .sample(sample):
+        case let .samples(title, _):
             if let cell = tableView.dequeue(TitleCell.self, indexPath: indexPath) {
-                cell.set(viewModel: SampleCellModel(sample: sample))
+                cell.set(viewModel: TitleCellModel(title: title))
+                return cell
+            }
+        case let .markets(title, _):
+            if let cell = tableView.dequeue(TitleCell.self, indexPath: indexPath) {
+                cell.set(viewModel: TitleCellModel(title: title))
                 return cell
             }
         }
@@ -83,6 +88,7 @@ class MainViewController: UITableViewController {
         switch section {
         case .strings: return "Strings"
         case .samples: return "Samples"
+        case .markets: return "Markets"
         }
     }
     

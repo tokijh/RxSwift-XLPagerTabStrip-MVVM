@@ -11,14 +11,12 @@ import RxSwift
 class StringService: StringServiceType {
     func getStrings() -> Observable<[String]> {
         return Observable.just([
-            "Child1",
-            "Child2",
-            "Child3",
-            "Child4",
-            "Child5",
-            "Child6",
-            "Child7",
-            "Child8",
+            "String 1",
+            "String 2",
+            "String 3",
+            "String 4",
+            "String 5",
+            "String 6",
         ])
     }
 }
