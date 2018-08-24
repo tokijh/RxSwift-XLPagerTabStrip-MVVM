@@ -1,0 +1,48 @@
+PODS:
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxOptional (3.5.0):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - RxSwiftExtensions (1.1.3):
+    - RxCocoa (>= 4.0)
+    - RxOptional (>= 3.5)
+    - RxSwift (>= 4.0)
+    - RxViewController
+  - RxViewController (0.3.0):
+    - RxCocoa (>= 4.0.0)
+    - RxSwift (>= 4.0.0)
+  - SnapKit (4.0.0)
+  - XLPagerTabStrip (8.0.1)
+
+DEPENDENCIES:
+  - RxCocoa
+  - RxOptional
+  - RxSwift
+  - RxSwiftExtensions
+  - SnapKit
+  - XLPagerTabStrip
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RxCocoa
+    - RxOptional
+    - RxSwift
+    - RxSwiftExtensions
+    - RxViewController
+    - SnapKit
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  RxSwiftExtensions: 8e280789bd4730680a4d2d852b6ba3e402c15851
+  RxViewController: 203510707e73dd95f147f0c387710e3ec80d2b0f
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
+
+PODFILE CHECKSUM: fa2a1960c08b4273db4657e4fc48b303594ae29f
+
+COCOAPODS: 1.5.3
