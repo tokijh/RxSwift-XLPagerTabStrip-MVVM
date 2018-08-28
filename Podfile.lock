@@ -1,4 +1,5 @@
 PODS:
+  - MXParallaxHeader (0.6.1)
   - RxCocoa (4.2.0):
     - RxSwift (~> 4.0)
   - RxOptional (3.5.0):
@@ -17,6 +18,7 @@ PODS:
   - XLPagerTabStrip (8.0.1)
 
 DEPENDENCIES:
+  - MXParallaxHeader
   - RxCocoa
   - RxOptional
   - RxSwift
@@ -26,6 +28,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - MXParallaxHeader
     - RxCocoa
     - RxOptional
     - RxSwift
@@ -35,6 +38,7 @@ SPEC REPOS:
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
+  MXParallaxHeader: 858c403532ed933b381556a81ce333d7065ad182
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
@@ -43,6 +47,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   XLPagerTabStrip: c908b17cbf42fcd2598ee1adfc49bae25444d88a
 
-PODFILE CHECKSUM: fa2a1960c08b4273db4657e4fc48b303594ae29f
+PODFILE CHECKSUM: fde542de73ed3cb2207ba96a06d413b715b45ff3
 
 COCOAPODS: 1.5.3

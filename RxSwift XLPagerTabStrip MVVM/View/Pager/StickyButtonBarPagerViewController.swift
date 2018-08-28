@@ -14,6 +14,8 @@ import RxSwiftExtensions
 
 class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     
+    static let buttonBarHeight: CGFloat = 36
+    
     fileprivate var disposeBag = DisposeBag()
     
     let viewModel: ButtonBarPagerViewModelType
@@ -61,6 +63,8 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     // MARK Pager
     fileprivate func setupPager() {
         defer { bindPager() }
+        setupStickyScrollView()
+        setupHeaderView()
         setupPagerView()
         setupButtonBar()
     }
@@ -80,8 +84,15 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
             .disposed(by: disposeBag)
     }
     
-    // MARK Header View
+    // MARK Sticky Scroll View
+    lazy var scrollView: MXScrollView = MXScrollView()
     
+    fileprivate func setupStickyScrollView() {
+        
+    }
+    
+    // MARK Header View
+    lazy var headerView: MarketHeaderView = MarketHeaderView()
     
     fileprivate func setupHeaderView() {
         
@@ -90,7 +101,7 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     // MARK Pager View
     fileprivate func setupPagerView() {
         settings.style.selectedBarHeight = 3
-        settings.style.buttonBarHeight = 36
+        settings.style.buttonBarHeight = StickyButtonBarPagerViewController.buttonBarHeight
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 13)
         settings.style.buttonBarItemTitleColor = .red
@@ -127,30 +138,76 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     
     // MARK Layout Pager (Container View / Bar Button)
     fileprivate func layoutPager() {
-        // Button Bar View
-        buttonBarView.snp.makeConstraints {
-            if #available(iOS 11.0, *) {
-                $0.top.equalTo(view.safeAreaLayoutGuide)
-            } else {
-                $0.top.equalToSuperview()
-            }
-            $0.left.equalToSuperview()
-            $0.right.equalToSuperview()
-            $0.height.equalTo(36)
+        // Scroll View
+        view.addSubview(scrollView)
+        scrollView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
         }
-        // Button Bar Bottom Shadow
-        view.addSubview(buttonBarBottomShadow)
-        buttonBarBottomShadow.snp.makeConstraints {
-            $0.top.equalTo(buttonBarView.snp.bottom).offset(3)
-            $0.width.equalToSuperview()
-            $0.height.equalTo(1)
+        
+        // Header View
+        
+        let offset: CGFloat
+        if #available(iOS 11.0, *) {
+            offset = (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0) + UIApplication.shared.statusBarFrame.height
+        } else {
+            offset = UIApplication.shared.statusBarFrame.height
         }
-        // Container View
-        containerView.snp.makeConstraints {
-            $0.top.equalTo(buttonBarBottomShadow.snp.bottom)
+        
+        let rootHeaderView = UIView()
+        rootHeaderView.addSubview(headerView)
+        headerView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(offset)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
             $0.bottom.equalToSuperview()
+        }
+        
+        let buttonBarWrapperView: UIView = {
+            let view = UIView()
+            view.backgroundColor = UIColor.white
+            return view
+        }()
+        rootHeaderView.addSubview(buttonBarWrapperView)
+        buttonBarWrapperView.snp.makeConstraints {
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
+        
+        // Button Bar View
+        let buttonBarView: ButtonBarView! = self.buttonBarView
+        buttonBarView.removeFromSuperview()
+        buttonBarWrapperView.addSubview(buttonBarView)
+        buttonBarView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.height.equalTo(StickyButtonBarPagerViewController.buttonBarHeight)
+        }
+        
+        // Button Bar Bottom Shadow
+        buttonBarWrapperView.addSubview(buttonBarBottomShadow)
+        buttonBarBottomShadow.snp.makeConstraints {
+            $0.top.equalTo(buttonBarView.snp.bottom).offset(3)
+            $0.left.equalToSuperview()
+            $0.right.equalToSuperview()
+            $0.bottom.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.equalTo(1)
+        }
+        scrollView.parallaxHeader.view = rootHeaderView
+        scrollView.parallaxHeader.height = 250
+        scrollView.parallaxHeader.minimumHeight = StickyButtonBarPagerViewController.buttonBarHeight + offset
+        scrollView.parallaxHeader.mode = .fill
+        
+        // Container View
+        let containerView: UIScrollView = self.containerView
+        containerView.removeFromSuperview()
+        scrollView.addSubview(containerView)
+        containerView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.height.equalTo(view)
+            $0.width.equalTo(view)
         }
     }
     

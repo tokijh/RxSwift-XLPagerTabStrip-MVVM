@@ -12,5 +12,6 @@ target 'RxSwift XLPagerTabStrip MVVM' do
   pod 'RxSwiftExtensions'
   pod 'XLPagerTabStrip'
   pod 'SnapKit'
+  pod 'MXParallaxHeader'
 
 end

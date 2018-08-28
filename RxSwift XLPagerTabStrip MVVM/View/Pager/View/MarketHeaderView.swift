@@ -22,7 +22,7 @@ class MarketHeaderView: UIView {
     
     fileprivate var disposeBag = DisposeBag()
     
-    var viewModel: MarketHeaderViewModelType? = nil {
+    open fileprivate(set) var viewModel: MarketHeaderViewModelType? = nil {
         didSet {
             disposeBag = DisposeBag()
             bind()
@@ -49,15 +49,16 @@ class MarketHeaderView: UIView {
 //        viewModel.titleLabelText.drive(titleLabel.rx.text).disposed(by: disposeBag)
     }
     
-    func setup() {
+    fileprivate func setup() {
         setupView()
     }
     
-    func setupView() {
+    fileprivate func setupView() {
+        backgroundColor = UIColor.red
         layout()
     }
     
-    func layout() {
+    fileprivate func layout() {
         // Market Image View
         addSubview(marketImageView)
         marketImageView.snp.makeConstraints {
