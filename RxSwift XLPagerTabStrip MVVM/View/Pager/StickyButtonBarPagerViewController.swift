@@ -146,7 +146,7 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
         
         // Header View
         
-        let offset: CGFloat
+        var offset: CGFloat
         if #available(iOS 11.0, *) {
             offset = (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0) + UIApplication.shared.statusBarFrame.height
         } else {
@@ -201,12 +201,19 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
         scrollView.parallaxHeader.mode = .fill
         
         // Container View
+        if #available(iOS 11.0, *) {
+            let safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
+            offset = safeAreaInsets.top + safeAreaInsets.bottom + UIApplication.shared.statusBarFrame.height + StickyButtonBarPagerViewController.buttonBarHeight
+        } else {
+            offset = UIApplication.shared.statusBarFrame.height + StickyButtonBarPagerViewController.buttonBarHeight
+        }
+        
         let containerView: UIScrollView = self.containerView
         containerView.removeFromSuperview()
         scrollView.addSubview(containerView)
         containerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
-            $0.height.equalTo(view)
+            $0.height.equalTo(view).offset(-offset)
             $0.width.equalTo(view)
         }
     }
