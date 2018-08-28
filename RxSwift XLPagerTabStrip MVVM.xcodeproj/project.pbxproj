@@ -45,6 +45,18 @@
 		CD389D04212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D02212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift */; };
 		CD389D08212FF67200474BA2 /* MarketPagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D06212FF67200474BA2 /* MarketPagerChildViewModelType.swift */; };
 		CD389D09212FF67200474BA2 /* MarketPagerChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D07212FF67200474BA2 /* MarketPagerChildViewModel.swift */; };
+		CD389D0D212FF8E200474BA2 /* StickyServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D0C212FF8E200474BA2 /* StickyServiceType.swift */; };
+		CD389D0F212FF8E900474BA2 /* StickyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D0E212FF8E900474BA2 /* StickyService.swift */; };
+		CD389D12212FF91A00474BA2 /* Sticky.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D11212FF91A00474BA2 /* Sticky.swift */; };
+		CD389D15212FFA6100474BA2 /* TablePagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D14212FFA6100474BA2 /* TablePagerChildViewModelType.swift */; };
+		CD389D17212FFC2200474BA2 /* StickyButtonBarPagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D16212FFC2200474BA2 /* StickyButtonBarPagerViewController.swift */; };
+		CD389D1A212FFD2300474BA2 /* MarketHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D19212FFD2300474BA2 /* MarketHeaderView.swift */; };
+		CD389D1D2134D77A00474BA2 /* StickyButtonBarPagerViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D1C2134D77A00474BA2 /* StickyButtonBarPagerViewModelType.swift */; };
+		CD389D1F2134D78000474BA2 /* StickyButtonBarPagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D1E2134D78000474BA2 /* StickyButtonBarPagerViewModel.swift */; };
+		CD389D262134DA5E00474BA2 /* TablePagerChildSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D252134DA5E00474BA2 /* TablePagerChildSectionData.swift */; };
+		CD389D282134DC3F00474BA2 /* TablePagerChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D272134DC3F00474BA2 /* TablePagerChildViewController.swift */; };
+		CD389D2B2134DD7800474BA2 /* StickyPagerChildViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D2A2134DD7800474BA2 /* StickyPagerChildViewModelType.swift */; };
+		CD389D2D2134DDD900474BA2 /* StickyPagerChildViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD389D2C2134DDD900474BA2 /* StickyPagerChildViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +102,18 @@
 		CD389D02212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketButtonBarPagerViewModel.swift; sourceTree = "<group>"; };
 		CD389D06212FF67200474BA2 /* MarketPagerChildViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPagerChildViewModelType.swift; sourceTree = "<group>"; };
 		CD389D07212FF67200474BA2 /* MarketPagerChildViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketPagerChildViewModel.swift; sourceTree = "<group>"; };
+		CD389D0C212FF8E200474BA2 /* StickyServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyServiceType.swift; sourceTree = "<group>"; };
+		CD389D0E212FF8E900474BA2 /* StickyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyService.swift; sourceTree = "<group>"; };
+		CD389D11212FF91A00474BA2 /* Sticky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sticky.swift; path = "RxSwift XLPagerTabStrip MVVM/Model/Sticky/Sticky.swift"; sourceTree = SOURCE_ROOT; };
+		CD389D14212FFA6100474BA2 /* TablePagerChildViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePagerChildViewModelType.swift; sourceTree = "<group>"; };
+		CD389D16212FFC2200474BA2 /* StickyButtonBarPagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyButtonBarPagerViewController.swift; sourceTree = "<group>"; };
+		CD389D19212FFD2300474BA2 /* MarketHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketHeaderView.swift; sourceTree = "<group>"; };
+		CD389D1C2134D77A00474BA2 /* StickyButtonBarPagerViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyButtonBarPagerViewModelType.swift; sourceTree = "<group>"; };
+		CD389D1E2134D78000474BA2 /* StickyButtonBarPagerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyButtonBarPagerViewModel.swift; sourceTree = "<group>"; };
+		CD389D252134DA5E00474BA2 /* TablePagerChildSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePagerChildSectionData.swift; sourceTree = "<group>"; };
+		CD389D272134DC3F00474BA2 /* TablePagerChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TablePagerChildViewController.swift; sourceTree = "<group>"; };
+		CD389D2A2134DD7800474BA2 /* StickyPagerChildViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyPagerChildViewModelType.swift; sourceTree = "<group>"; };
+		CD389D2C2134DDD900474BA2 /* StickyPagerChildViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyPagerChildViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +231,7 @@
 				CD389C9D212FDC1500474BA2 /* SectionData */,
 				CD389C9C212FDC0D00474BA2 /* Sample */,
 				CD389CF8212FEF5F00474BA2 /* Market */,
+				CD389D10212FF90800474BA2 /* Sticky */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				CD389CA0212FDC2A00474BA2 /* Main */,
+				CD389D232134DA5000474BA2 /* Pager */,
 			);
 			path = SectionData;
 			sourceTree = "<group>";
@@ -258,6 +284,7 @@
 				CD389CF9212FF09B00474BA2 /* StringService */,
 				CD389CAC212FDD6C00474BA2 /* SampleService */,
 				CD389CB5212FDDF700474BA2 /* MarketService */,
+				CD389D0B212FF8D100474BA2 /* StickyService */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -283,8 +310,10 @@
 		CD389CC5212FE58000474BA2 /* Pager */ = {
 			isa = PBXGroup;
 			children = (
+				CD389D18212FFD1300474BA2 /* View */,
 				CD389CC8212FE5D100474BA2 /* Child */,
 				CD389CC6212FE59A00474BA2 /* ButtonBarPagerViewController.swift */,
+				CD389D16212FFC2200474BA2 /* StickyButtonBarPagerViewController.swift */,
 			);
 			path = Pager;
 			sourceTree = "<group>";
@@ -293,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				CD389CCF212FE67E00474BA2 /* TitlePagerChildViewController.swift */,
+				CD389D272134DC3F00474BA2 /* TablePagerChildViewController.swift */,
 			);
 			path = Child;
 			sourceTree = "<group>";
@@ -322,6 +352,7 @@
 				CD389CE9212FEAAE00474BA2 /* StringButtonBarPagerViewModel */,
 				CD389CF2212FECDD00474BA2 /* SampleButtonBarPagerViewModel */,
 				CD389D00212FF60F00474BA2 /* MarketButtonBarPagerViewModel */,
+				CD389D1B2134D75C00474BA2 /* StickyButtonBarPagerViewModel */,
 			);
 			path = Pager;
 			sourceTree = "<group>";
@@ -330,9 +361,11 @@
 			isa = PBXGroup;
 			children = (
 				CD389CD7212FE73D00474BA2 /* TitlePagerChildViewModel */,
+				CD389D13212FFA4400474BA2 /* TablePagerChildViewModel */,
 				CD389CD8212FE74B00474BA2 /* StringPagerChildViewModel */,
 				CD389CDD212FE88B00474BA2 /* SamplePagerChildViewModel */,
 				CD389D05212FF67200474BA2 /* MarketPagerChildViewModel */,
+				CD389D292134DD5D00474BA2 /* StickyPagerChildViewModel */,
 			);
 			path = Child;
 			sourceTree = "<group>";
@@ -422,6 +455,73 @@
 				CD389D07212FF67200474BA2 /* MarketPagerChildViewModel.swift */,
 			);
 			path = MarketPagerChildViewModel;
+			sourceTree = "<group>";
+		};
+		CD389D0B212FF8D100474BA2 /* StickyService */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D0C212FF8E200474BA2 /* StickyServiceType.swift */,
+				CD389D0E212FF8E900474BA2 /* StickyService.swift */,
+			);
+			path = StickyService;
+			sourceTree = "<group>";
+		};
+		CD389D10212FF90800474BA2 /* Sticky */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D11212FF91A00474BA2 /* Sticky.swift */,
+			);
+			path = Sticky;
+			sourceTree = "<group>";
+		};
+		CD389D13212FFA4400474BA2 /* TablePagerChildViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D14212FFA6100474BA2 /* TablePagerChildViewModelType.swift */,
+			);
+			path = TablePagerChildViewModel;
+			sourceTree = "<group>";
+		};
+		CD389D18212FFD1300474BA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D19212FFD2300474BA2 /* MarketHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD389D1B2134D75C00474BA2 /* StickyButtonBarPagerViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D1C2134D77A00474BA2 /* StickyButtonBarPagerViewModelType.swift */,
+				CD389D1E2134D78000474BA2 /* StickyButtonBarPagerViewModel.swift */,
+			);
+			path = StickyButtonBarPagerViewModel;
+			sourceTree = "<group>";
+		};
+		CD389D232134DA5000474BA2 /* Pager */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D242134DA5600474BA2 /* Child */,
+			);
+			path = Pager;
+			sourceTree = "<group>";
+		};
+		CD389D242134DA5600474BA2 /* Child */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D252134DA5E00474BA2 /* TablePagerChildSectionData.swift */,
+			);
+			path = Child;
+			sourceTree = "<group>";
+		};
+		CD389D292134DD5D00474BA2 /* StickyPagerChildViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CD389D2A2134DD7800474BA2 /* StickyPagerChildViewModelType.swift */,
+				CD389D2C2134DDD900474BA2 /* StickyPagerChildViewModel.swift */,
+			);
+			path = StickyPagerChildViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,20 +649,30 @@
 			files = (
 				CD389CCE212FE61400474BA2 /* Pager.swift in Sources */,
 				CD389D08212FF67200474BA2 /* MarketPagerChildViewModelType.swift in Sources */,
+				CD389D15212FFA6100474BA2 /* TablePagerChildViewModelType.swift in Sources */,
 				CD389D04212FF60F00474BA2 /* MarketButtonBarPagerViewModel.swift in Sources */,
 				CD389CEF212FEBAE00474BA2 /* StringButtonBarPagerViewModel.swift in Sources */,
 				CD389CB9212FDE1B00474BA2 /* MarketService.swift in Sources */,
+				CD389D1A212FFD2300474BA2 /* MarketHeaderView.swift in Sources */,
 				CD389C7B212FDB0000474BA2 /* AppDelegate.swift in Sources */,
 				CD389CFF212FF4DB00474BA2 /* TitleCellModel.swift in Sources */,
 				CD389CF1212FECBA00474BA2 /* SampleButtonBarPagerViewModel.swift in Sources */,
+				CD389D282134DC3F00474BA2 /* TablePagerChildViewController.swift in Sources */,
 				CD389CDF212FE8A400474BA2 /* SamplePagerChildViewModel.swift in Sources */,
 				CD389CB0212FDDA400474BA2 /* SampleService.swift in Sources */,
 				CD389CDC212FE77B00474BA2 /* StringPagerChildViewModelType.swift in Sources */,
+				CD389D262134DA5E00474BA2 /* TablePagerChildSectionData.swift in Sources */,
+				CD389D2B2134DD7800474BA2 /* StickyPagerChildViewModelType.swift in Sources */,
+				CD389D2D2134DDD900474BA2 /* StickyPagerChildViewModel.swift in Sources */,
+				CD389D1D2134D77A00474BA2 /* StickyButtonBarPagerViewModelType.swift in Sources */,
 				CD389CFD212FF0B200474BA2 /* StringServiceType.swift in Sources */,
 				CD389CBF212FE0A900474BA2 /* TitleCellModelType.swift in Sources */,
 				CD389CE1212FE8CA00474BA2 /* SamplePagerChildViewModelType.swift in Sources */,
 				CD389D09212FF67200474BA2 /* MarketPagerChildViewModel.swift in Sources */,
 				CD389CFC212FF0B200474BA2 /* StringService.swift in Sources */,
+				CD389D17212FFC2200474BA2 /* StickyButtonBarPagerViewController.swift in Sources */,
+				CD389D12212FF91A00474BA2 /* Sticky.swift in Sources */,
+				CD389D0D212FF8E200474BA2 /* StickyServiceType.swift in Sources */,
 				CD389CDA212FE76F00474BA2 /* StringPagerChildViewModel.swift in Sources */,
 				CD389C9B212FDC0400474BA2 /* Sample.swift in Sources */,
 				CD389C8F212FDBA100474BA2 /* MainViewController.swift in Sources */,
@@ -572,9 +682,11 @@
 				CD389CC7212FE59A00474BA2 /* ButtonBarPagerViewController.swift in Sources */,
 				CD389D03212FF60F00474BA2 /* MarketButtonBarPagerViewModelType.swift in Sources */,
 				CD389CED212FEAF300474BA2 /* SampleButtonBarPagerViewModelType.swift in Sources */,
+				CD389D0F212FF8E900474BA2 /* StickyService.swift in Sources */,
 				CD389CB4212FDDB800474BA2 /* SampleServiceType.swift in Sources */,
 				CD389CEB212FEAC300474BA2 /* StringButtonBarPagerViewModelType.swift in Sources */,
 				CD389CBD212FE08300474BA2 /* TitleCell.swift in Sources */,
+				CD389D1F2134D78000474BA2 /* StickyButtonBarPagerViewModel.swift in Sources */,
 				CD389CD0212FE67E00474BA2 /* TitlePagerChildViewController.swift in Sources */,
 				CD389CF7212FEF4200474BA2 /* Market.swift in Sources */,
 				CD389C98212FDBE200474BA2 /* ViewModelType.swift in Sources */,

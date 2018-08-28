@@ -13,10 +13,14 @@ class MainViewModel: MainViewModelType {
     
     let disposeBag = DisposeBag()
     
-    required init(stringService: StringServiceType = StringService(), sampleService: SampleServiceType = SampleService(), marketService: MarketServiceType = MarketService()) {
+    required init(stringService: StringServiceType = StringService(),
+                  sampleService: SampleServiceType = SampleService(),
+                  marketService: MarketServiceType = MarketService(),
+                  stickyService: StickyServiceType = StickyService()) {
         self.stringService = stringService
         self.sampleService = sampleService
         self.marketService = marketService
+        self.stickyService = stickyService
         setup()
     }
     
@@ -28,6 +32,7 @@ class MainViewModel: MainViewModelType {
     let stringService: StringServiceType
     let sampleService: SampleServiceType
     let marketService: MarketServiceType
+    let stickyService: StickyServiceType
     
     // MARK Section
     let sections = BehaviorRelay<[MainSectionData]>(value: [])
@@ -47,7 +52,11 @@ class MainViewModel: MainViewModelType {
         let sectionDataMarketLikedValue = marketService.getLikedMarkets().map({ MainSectionData.Value.markets(title: "Market Liked", items: $0) })
         let sectionDataMarket = Observable.combineLatest([sectionDataMarketAllValue, sectionDataMarketLikedValue]).map({ MainSectionData.markets($0) })
         
-        Observable.combineLatest([sectionDataString, sectionDataSample, sectionDataMarket])
+        // Sticky
+        let sectionDataStickyValue = stickyService.getStickies().map({ $0.map({ MainSectionData.Value.sticky(title: "Sticky", sticky: $0) }) })
+        let sectionDataSticky = sectionDataStickyValue.map({ $0 }).map({ MainSectionData.stickies($0) })
+        
+        Observable.combineLatest([sectionDataString, sectionDataSample, sectionDataMarket, sectionDataSticky])
             .bind(to: sections)
             .disposed(by: disposeBag)
         
