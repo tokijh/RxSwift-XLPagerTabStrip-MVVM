@@ -14,11 +14,9 @@ import RxSwiftExtensions
 
 class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     
-    static let buttonBarHeight: CGFloat = 36
-    
     fileprivate var disposeBag = DisposeBag()
     
-    let viewModel: ButtonBarPagerViewModelType
+    open let viewModel: ButtonBarPagerViewModelType
     
     init(viewModel: ButtonBarPagerViewModelType) {
         self.viewModel = viewModel
@@ -85,23 +83,28 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     }
     
     // MARK Sticky Scroll View
-    lazy var scrollView: MXScrollView = MXScrollView()
+    open fileprivate(set) lazy var scrollView: MXScrollView = MXScrollView()
     
     fileprivate func setupStickyScrollView() {
-        
+        if #available(iOS 11.0, *) {
+            scrollView.contentInsetAdjustmentBehavior = .never
+        }
     }
     
     // MARK Header View
-    lazy var headerView: MarketHeaderView = MarketHeaderView()
+    open let headerHeight: CGFloat = 250
+    open let minimumHeaderHeight: CGFloat = 39
+    
+    lazy var headerView: StickyHeaderView = StickyHeaderView()
     
     fileprivate func setupHeaderView() {
-        
+        headerView.set(viewModel: StickyHeaderViewModel())
     }
     
     // MARK Pager View
     fileprivate func setupPagerView() {
         settings.style.selectedBarHeight = 3
-        settings.style.buttonBarHeight = StickyButtonBarPagerViewController.buttonBarHeight
+        settings.style.buttonBarHeight = buttonBarHeight
         settings.style.buttonBarItemBackgroundColor = .white
         settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 13)
         settings.style.buttonBarItemTitleColor = .red
@@ -116,7 +119,9 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     }
     
     // MARK Bar Button
-    lazy var buttonBarBottomShadow: UIView = {
+    open let buttonBarHeight: CGFloat = 35
+    
+    open fileprivate(set) lazy var buttonBarBottomShadow: UIView = {
         let view = UIView()
         view.backgroundColor = .blue
         return view
@@ -145,12 +150,14 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
         }
         
         // Header View
-        
         var offset: CGFloat
         if #available(iOS 11.0, *) {
-            offset = (UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0) + UIApplication.shared.statusBarFrame.height
+            let statusHeight = UIApplication.shared.statusBarFrame.height
+            let safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
+            let navBarHeight = navigationController?.navigationBar.bounds.height ?? 0
+            offset = statusHeight + (safeAreaInsets.top > 0 ? safeAreaInsets.top : navBarHeight)
         } else {
-            offset = UIApplication.shared.statusBarFrame.height
+            offset = (navigationController?.navigationBar.bounds.height ?? 0) + UIApplication.shared.statusBarFrame.height
         }
         
         let rootHeaderView = UIView()
@@ -159,7 +166,6 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
             $0.top.equalToSuperview().offset(offset)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
-            $0.bottom.equalToSuperview()
         }
         
         let buttonBarWrapperView: UIView = {
@@ -169,20 +175,21 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
         }()
         rootHeaderView.addSubview(buttonBarWrapperView)
         buttonBarWrapperView.snp.makeConstraints {
+            $0.top.equalTo(headerView.snp.bottom)
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
         
         // Button Bar View
-        let buttonBarView: ButtonBarView! = self.buttonBarView
+        let buttonBarView: ButtonBarView = self.buttonBarView
         buttonBarView.removeFromSuperview()
         buttonBarWrapperView.addSubview(buttonBarView)
         buttonBarView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.left.equalToSuperview()
             $0.right.equalToSuperview()
-            $0.height.equalTo(StickyButtonBarPagerViewController.buttonBarHeight)
+            $0.height.equalTo(buttonBarHeight)
         }
         
         // Button Bar Bottom Shadow
@@ -196,16 +203,20 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
             $0.height.equalTo(1)
         }
         scrollView.parallaxHeader.view = rootHeaderView
-        scrollView.parallaxHeader.height = 250
-        scrollView.parallaxHeader.minimumHeight = StickyButtonBarPagerViewController.buttonBarHeight + offset
+        scrollView.parallaxHeader.height = headerHeight
+        scrollView.parallaxHeader.minimumHeight = minimumHeaderHeight + offset
         scrollView.parallaxHeader.mode = .fill
         
         // Container View
         if #available(iOS 11.0, *) {
+            let statusHeight = UIApplication.shared.statusBarFrame.height
             let safeAreaInsets = UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
-            offset = safeAreaInsets.top + safeAreaInsets.bottom + UIApplication.shared.statusBarFrame.height + StickyButtonBarPagerViewController.buttonBarHeight
+            let navBarHeight = navigationController?.navigationBar.bounds.height ?? 0
+            offset = statusHeight + (safeAreaInsets.top > 0 ? safeAreaInsets.top : navBarHeight) + minimumHeaderHeight + safeAreaInsets.bottom
         } else {
-            offset = UIApplication.shared.statusBarFrame.height + StickyButtonBarPagerViewController.buttonBarHeight
+            let statusHeight = UIApplication.shared.statusBarFrame.height
+            let navBarHeight = navigationController?.navigationBar.bounds.height ?? 0
+            offset = statusHeight + minimumHeaderHeight + navBarHeight
         }
         
         let containerView: UIScrollView = self.containerView

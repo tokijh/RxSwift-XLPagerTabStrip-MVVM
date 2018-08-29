@@ -7,9 +7,9 @@
 //
 
 class Market {
-    var title: String? = nil
+    var name: String? = nil
     
-    init(title: String? = nil) {
-        self.title = title
+    init(name: String? = nil) {
+        self.name = name
     }
 }

@@ -11,7 +11,7 @@ import RxSwift
 class StickyService: StickyServiceType {
     func getStickies() -> Observable<[Sticky]> {
         return Observable.just([
-            Sticky(title: "Sticky 1", market: Market(title: "Market Title"), rows: Array(0..<100).map({ "\($0)" }))
+            Sticky(title: "Sticky 1", market: Market(name: "Market Name"), rows: Array(0..<100).map({ "\($0)" }))
         ])
     }
 }
