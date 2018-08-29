@@ -11,7 +11,7 @@ import RxCocoa
 
 class MarketPagerChildViewModel: MarketPagerChildViewModelType {
     
-    let disposeBag = DisposeBag()
+    fileprivate let disposeBag = DisposeBag()
     
     required init(market: Market) {
         self.market = BehaviorRelay<Market>(value: market)
@@ -23,14 +23,14 @@ class MarketPagerChildViewModel: MarketPagerChildViewModelType {
     }
     
     // MART Market
-    let market: BehaviorRelay<Market>
+    open let market: BehaviorRelay<Market>
     
     // MARK Title Text
-    let titleText = BehaviorRelay<String?>(value: nil)
+    open let titleText = BehaviorRelay<String?>(value: nil)
     
     fileprivate func setupTitleText() {
         market
-            .map({ $0.title })
+            .map({ $0.name })
             .bind(to: titleText)
             .disposed(by: disposeBag)
     }

@@ -58,7 +58,7 @@ class ButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
             .disposed(by: disposeBag)
     }
     
-    // MARK Pager View
+    // MARK Pager
     fileprivate func setupPager() {
         defer { bindPager() }
         setupPagerView()
@@ -80,6 +80,7 @@ class ButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
             .disposed(by: disposeBag)
     }
     
+    // MARK Pager View
     fileprivate func setupPagerView() {
         settings.style.selectedBarHeight = 3
         settings.style.buttonBarHeight = 36

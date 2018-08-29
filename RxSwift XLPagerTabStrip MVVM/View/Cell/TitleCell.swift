@@ -14,6 +14,7 @@ import RxCocoa
 class TitleCell: UITableViewCell {
     
     fileprivate var disposeBag = DisposeBag()
+    
     var viewModel: TitleCellModelType? = nil {
         didSet {
             bind()

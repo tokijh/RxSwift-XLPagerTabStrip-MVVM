@@ -78,6 +78,11 @@ class MainViewController: UITableViewController {
                 cell.set(viewModel: TitleCellModel(title: title))
                 return cell
             }
+        case let .sticky(title, _):
+            if let cell = tableView.dequeue(TitleCell.self, indexPath: indexPath) {
+                cell.set(viewModel: TitleCellModel(title: title))
+                return cell
+            }
         }
         return UITableViewCell()
     }
@@ -89,6 +94,7 @@ class MainViewController: UITableViewController {
         case .strings: return "Strings"
         case .samples: return "Samples"
         case .markets: return "Markets"
+        case .stickies: return "Stickies"
         }
     }
     

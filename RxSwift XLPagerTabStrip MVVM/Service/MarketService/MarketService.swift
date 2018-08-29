@@ -11,33 +11,33 @@ import RxSwift
 class MarketService: MarketServiceType {
     func getAllMarkets() -> Observable<[Market]> {
         return Observable.just([
-            Market(title: "Market 1"),
-            Market(title: "Market 2"),
-            Market(title: "Market 3"),
-            Market(title: "Market 4"),
-            Market(title: "Market 5"),
-            Market(title: "Market 6"),
-            Market(title: "Market 7"),
-            Market(title: "Market 8"),
-            Market(title: "Market 9"),
-            Market(title: "Market 10"),
-            Market(title: "Market 11"),
-            Market(title: "Market 12"),
-            Market(title: "Market 13"),
-            Market(title: "Market 14"),
-            Market(title: "Market 15"),
+            Market(name: "Market 1"),
+            Market(name: "Market 2"),
+            Market(name: "Market 3"),
+            Market(name: "Market 4"),
+            Market(name: "Market 5"),
+            Market(name: "Market 6"),
+            Market(name: "Market 7"),
+            Market(name: "Market 8"),
+            Market(name: "Market 9"),
+            Market(name: "Market 10"),
+            Market(name: "Market 11"),
+            Market(name: "Market 12"),
+            Market(name: "Market 13"),
+            Market(name: "Market 14"),
+            Market(name: "Market 15"),
         ])
     }
     
     func getLikedMarkets() -> Observable<[Market]> {
         return Observable.just([
-            Market(title: "Market 1"),
-            Market(title: "Market 2"),
-            Market(title: "Market 5"),
-            Market(title: "Market 6"),
-            Market(title: "Market 7"),
-            Market(title: "Market 12"),
-            Market(title: "Market 13"),
+            Market(name: "Market 1"),
+            Market(name: "Market 2"),
+            Market(name: "Market 5"),
+            Market(name: "Market 6"),
+            Market(name: "Market 7"),
+            Market(name: "Market 12"),
+            Market(name: "Market 13"),
             ])
     }
 }
