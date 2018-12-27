@@ -34,7 +34,13 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
         defer { bind() }
         setupView()
     }
-    
+
+    fileprivate func lazySetup() {
+        containerView.bounces = false
+        layoutPager()
+        setupRefreshControl()
+    }
+
     fileprivate func bind() {
         // Action
         viewModel.actionReloadPager
@@ -54,32 +60,17 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
             .subscribe(onNext: { [weak self] in
                 // Set default background color
                 self?.view.backgroundColor = .white
+                self?.lazySetup()
             })
             .disposed(by: disposeBag)
     }
     
     // MARK Pager
     fileprivate func setupPager() {
-        defer { bindPager() }
         setupStickyScrollView()
         setupHeaderView()
         setupPagerView()
         setupButtonBar()
-    }
-    
-    fileprivate func bindPager() {
-        rx.viewDidLoad
-            .subscribe(onNext: { [weak self] in
-                self?.containerView.bounces = false
-            })
-            .disposed(by: disposeBag)
-        
-        // Layout Pager
-        rx.viewDidLoad
-            .subscribe(onNext: { [weak self] in
-                self?.layoutPager()
-            })
-            .disposed(by: disposeBag)
     }
     
     // MARK Sticky Scroll View
@@ -231,5 +222,23 @@ class StickyButtonBarPagerViewController: ButtonBarPagerTabStripViewController {
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         return viewModel.childViewControllers.value
+    }
+
+    // MARK RefreshControl
+    open fileprivate(set) lazy var refreshControl = UIRefreshControl()
+
+    fileprivate func setupRefreshControl() {
+        defer { bindRefreshControl() }
+        scrollView.addSubview(refreshControl)
+        refreshControl.bounds = CGRect(x: refreshControl.bounds.origin.x, y: headerHeight - UIApplication.shared.statusBarFrame.height - (navigationController?.navigationBar.bounds.height ?? 0), width: refreshControl.bounds.size.width, height: refreshControl.bounds.size.height)
+        refreshControl.tintColor = UIColor.black
+    }
+
+    fileprivate func bindRefreshControl() {
+        refreshControl.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { [weak self] in
+                self?.refreshControl.endRefreshing()
+            })
+            .disposed(by: disposeBag)
     }
 }
